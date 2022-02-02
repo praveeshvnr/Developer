@@ -14,6 +14,9 @@ def leaverequiest(request):
     return render(request,'leaverequiest.html')
 def drattendance(request):
     return render(request,'drattendance.html')
+def Tattend(request):
+    return render(request,'Tattend.html')
+
 
 
 
