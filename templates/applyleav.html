@@ -1,7 +1,7 @@
 {% extends 'index.html' %}
 {% load static %}
 {% block content %}
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -12,9 +12,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <title>Infox core</title>
+  <title>Infox core</title>-->
 <style>
-
+/*
 #box2{
   padding: 1% 5% 1% 5%;
   background-color: white;
@@ -46,10 +46,24 @@ h5{
 #box2 img{
   margin-top: 15px;
 }
+.container{
+  width: 50%;
+  margin-left: 10%;
+}*/
+#leaves{
+margin: 10%;
+
+}
+#leaves1{
+  margin: 10%;
+}
+a{
+  text-decoration: none;
+}
 
   </style>
-      </head>
-<body>
+     <!-- </head>
+<body> -->
 <!-- <div  id="nav" class="container-fluid">
         <a class="one" id="infox"><b>iNFOX</b></a>
         <a class="two" id="core"><b>Core</b></a>
@@ -69,6 +83,70 @@ h5{
   <a href="drpayments" class="col" id="sidebox1">PAYMENTS</a>
   <a href="drapplyleave" class="col" id="sidebox1">APPLY LEAVE</a>
 </div> -->
+<!-- <h5>Revenue</h5>
+<div class="row">
+  <div class="col-8 col-sm-12 col-md-4 my-auto">
+    <div class="d-flex d-sm-block d-md-flex align-items-center">
+      <h2 class="mb-0">$32123</h2>
+      <p class="text-success ms-2 mb-0 font-weight-medium">+3.5%</p>
+    </div>
+    <h6 class="text-muted font-weight-normal">11.38% Since last month</h6>
+  </div>
+  <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+    <i class="icon-lg mdi mdi-codepen text-primary ms-auto"></i>
+  </div>
+</div> -->
+<div class="row">
+<div class="col-sm-4 col-md-4 grid-margin " id="leaves" style="margin-left: 5%;">
+  <a href="/applyleav1">
+  <div class="card">
+    <div class="card-body">
+    <h5 >Apply leave</h5>
+      <div class="row">
+        <!-- <div class="col-8 col-sm-12 col-xl-8 my-auto">
+          <div class="d-flex d-sm-block d-md-flex align-items-center">
+            <h2 class="mb-0">$45850</h2>
+            <p class="text-success ms-2 mb-0 font-weight-medium">+8.3%</p>
+          </div>
+          <h6 class="text-muted font-weight-normal"> 9.61% Since last month</h6>
+        </div> -->
+        <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+          <i class="icon-lg mdi mdi-wallet-travel text-danger ms-auto"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
+</div>
+<div class="col-sm-4 grid-margin" id="leaves1" style="margin-left: 5%;">
+  <a href="/applyleav2/">
+  <div class="card">
+    <div class="card-body">
+    <h5>Requested leaves</h5>
+      <div class="row">
+        <!-- <div class="col-8 col-sm-12 col-xl-8 my-auto">
+            <div class="d-flex d-sm-block d-md-flex align-items-center">
+              <h2 class="mb-0">$2039</h2>
+              <p class="text-danger ms-2 mb-0 font-weight-medium">-2.1% </p>
+            </div>
+          <h6 class="text-muted font-weight-normal">2.27% Since last month</h6>
+        </div> -->
+        <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+          <i class="icon-lg mdi mdi-monitor text-success ms-auto"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
+</div>
+</div>
+
+
+
+
+<!-- 
+  <div class="container row" style="border: 1px solid white;">
+    <div class="col-md-4">
 <div><label id="myprofile">REQUESTED LEAVE</label>
 <div id="hiddendiv">
 {% for leavereq in names %}
@@ -85,6 +163,8 @@ h5{
 </div>
 </div>
 </div>
-</body>
+</div>
+</div>
+</body> -->
 {% endblock %}
 </html>

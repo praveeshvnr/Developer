@@ -21,5 +21,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index),
     path('applyleav/', views.applyleave),
+    path('applyleav1/', views.applyleav1),
+    path('applyleav2/', views.applyleav2),
+    path('leaverequiest/', views.leaverequiest),
+    path('drattendance/', views.drattendance),
     
 ]

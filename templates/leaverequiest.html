@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="row ml-20" >
+        <div class="col-md-4 w-100" style="margin-top: 10%; border: white solid 1px;">
+            <div style="border: white;"><label id="myprofile" style="color: white;">REQUESTED LEAVE</label>
+                <div id="hiddendiv">
+                {% for leavereq in names %}
+                {% if forloop.first %} {% endif %}
+                    <div id="box2" class="shadow bg-white">
+                    <img src="{% static 'circle.png'%}" width="20" height="20">
+                    <h5>Requested leave from </h5>
+                    <h5 style="width: 130px">{{leavereq.leavefrom}}</h5>
+                    <h5 style="width: 130px">{{leavereq.leaveto}}</h5>
+                    <h5 style="">STATUS</h5>
+                    <h5 style="width: 80px;color: blue"><span>{{ leavereq.status }}</span></h5>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div><label id="myprofile">ATTENDANCE</label>
+        <div id="firstbox" class="shadow p-3 bg-dark">
+            <div class="">
+              <label>SELECT FROM DATE</label>&nbsp
+              <input type="date" name="fromdate" id="regfd" style="width: 450px">
+            </div>
+            <div class="">
+              <label>SELECT TO DATE</label>&nbsp
+              <input type="date" name="todate" id="regtd" style="width: 450px">
+            </div>
+            <button id="btnSearch" type="button" class="btn btn-primary Search" >Search</button>
+        <div id="hiddendiv">
+        </div>
+        </div>
+        </div>
+        <script type="text/javascript">
+                $("#btnSearch").click(function () {
+                const url = $("#personForm").attr("data-cities-url");
+                const deptId = $("#regfd").val();
+                const desgId = $("#regtd").val();
+                $.ajax({
+                    url: 'drattendncemy',
+                    data: {
+                        'dept_id': deptId,
+                        'desig_id':desgId
+                    },
+                    success: function (data) {
+                        $("#hiddendiv").html(data);
+                    }
+                });
+            });
+          function showDiv() {
+           document.getElementById('hiddendiv').style.display = "block";
+        }
+        </script>
+</body>
+{% endblock %}
+</html>
