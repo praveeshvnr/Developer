@@ -12,26 +12,50 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
+<style>
+#hiddendiv{
+    color: rgb(255, 255, 255);
+    margin-top: 10%; 
+    margin-left: 5%; 
+    margin-right: 12%;
+     background-color: #191c24;
+     padding: 10px;
+}
+</style>
 <body>
+    <div style="border: white;"><label id="myprofile" style="color: white; margin-left: 4%;">REQUESTED LEAVE</label></div>
     <div class="row" >
-        <div class="col-md-12 w-50 ml-10" style="margin-top: 10%; margin-left: 5%; border: white solid 1px;">
-            <div style="border: white;"><label id="myprofile" style="color: white;">REQUESTED LEAVE</label>
-                <div id="hiddendiv">
-                {% for leavereq in names %}
-                {% if forloop.first %} {% endif %}
-                    <div id="box2" class="shadow bg-white">
-                    <img src="{% static 'circle.png'%}" width="20" height="20">
-                    <h5>Requested leave from </h5>
-                    <h5 style="width: 130px">{{leavereq.leavefrom}}</h5>
-                    <h5 style="width: 130px">{{leavereq.leaveto}}</h5>
+        <div  class="col-md-10 w-90  shadow" id="hiddendiv" >
+                
+                    <div id="box2" class="shadow " style="background-color: #191c24;">
+                            <div class="row">
+                            <tr>
+                                <div class="col-md-3">
+                              <h3 >Requested leave from</h3>
+                            </div>
+                            <div class="col-md-3">
+                                <h3 >Feb.2,2022</h3>
+                              </div>
+                              <div class="col-md-3">
+                                <h3 >Feb.2,2022</h3>
+                              </div>
+                              <div class="col-md-3">
+                                <h3 >Status</h3>
+                              </div>
+                            </tr>
+                        </div>
+                          
+                    <!-- <h5>Requested leave from </h5>
+                    <h5 style="width: 130px">Feb.2,2022</h5>
+                    <h5 style="width: 130px">Feb.2,2022</h5>
                     <h5 >STATUS</h5>
-                    <h5 style="width: 80px;color: blue"><span>{{ leavereq.status }}</span></h5>
+                    <h5 style="width: 80px;color: blue"><span>{{ leavereq.status }}</span></h5> -->
                     </div>
-                {% endfor %}
+               
                 </div>
-            </div>
+            
         </div>
-    </div>
+    
 </body>
 {% endblock %}
 </html>

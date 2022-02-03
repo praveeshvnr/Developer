@@ -13,16 +13,17 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <style>
-  #firstbox{
+  #firstbox1{
     margin-top: 5%;
     margin-left: 5%;
+    
   }
 </style>
 <body>
-    <div id="firstbox"><label id="myprofile" style="margin-left: 4%;">ATTENDANCE</label>
+    <div id="firstbox1"><label id="myprofile" style="margin-left: 0%;">ATTENDANCE</label>
       <div class="row">
         <div class="col-md-10">
-          <div id="firstbox" class="shadow p-3 ">
+          <div id="firstbox" class="shadow p-3 " style="background-color: #191c24">
             <div class="row">
               <div class="col-md-3">
               <label>SELECT FROM DATE</label>&nbsp
@@ -53,28 +54,8 @@
             </div>
             <div class="row">
             <div class="col-md-12 mt-5">
-            <div id="hiddendiv" style="background-color: aliceblue; color: #000;">
-             <!-- <table class="table table-bordered">
-                 <thead>
-                  <tr>
-                    <th>DATE</th>
-                    <th>STATUS</th>
-                    <th>LOGIN TIME</th>
-                    <th>LOGOUT TIME</th>
-                  </tr>
-                </thead>
-                <tbody>
-                 {% for ra in names %}
-                 {% if forloop.first %} {% endif %}
-                  <tr>
-                    <td>{{ ra.date}}</td>
-                    <td>{{ ra.status }}</td>
-                    <td>{{ ra.login}}</td>
-                    <td>{{ ra.logout }}</td>
-                  </tr>
-                {% endfor %}
-                </tbody>
-              </table> -->
+            <div id="hiddendiv" style="margin-left: 20%;">
+            
             </div>
           </div>
             </div>
@@ -83,24 +64,36 @@
     </div>
     </div>
         <script type="text/javascript">
-                $("#btnSearch").click(function () {
-                const url = $("#personForm").attr("data-cities-url");
-                const deptId = $("#regfd").val();
-                const desgId = $("#regtd").val();
-                $.ajax({
-                    url: 'Tattend',
-                    data: {
-                        'dept_id': deptId,
-                        'desig_id':desgId
-                    },
-                    success: function (data) {
-                        $("#hiddendiv").html(data);
-                    }
-                });
+        //         $("#btnSearch").click(function () {
+        //         const url = $("#personForm").attr("data-cities-url");
+        //         const deptId = $("#regfd").val();
+        //         const desgId = $("#regtd").val();
+        //         $.ajax({
+        //             url: 'Tattend',
+        //             data: {
+        //                 'dept_id': deptId,
+        //                 'desig_id':desgId
+        //             },
+        //             success: function (data) {
+        //                 $("#hiddendiv").html(data);
+        //             }
+        //         });
+        //     });
+        //   function showDiv() {
+        //    document.getElementById('hiddendiv').style.display = "block";
+        // }
+        // Check if file is completely ready
+        $(document).ready(function () {
+  
+              
+              $('#btnSearch').click(function () {
+
+                  
+                  $('#hiddendiv').html('<thead style="background-color: black; color: white;"><tr><th style="color: white;">DATE</th><th>STATUS</th><th>LOGIN TIME</th> <th>LOGOUT TIME</th></tr> </thead>');
+              });
+
+              
             });
-          function showDiv() {
-           document.getElementById('hiddendiv').style.display = "block";
-        }
         </script>
 </body>
 {% endblock %}
