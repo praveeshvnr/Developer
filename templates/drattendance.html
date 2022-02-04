@@ -53,8 +53,8 @@
 
             </div>
             <div class="row">
-            <div class="col-md-12 mt-5">
-            <div id="hiddendiv" style="margin-left: 20%;">
+            <div class="col-md-8 mt-5">
+            <div id="hiddendiv" style="margin-left: 5%;">
             
             </div>
           </div>
@@ -89,11 +89,31 @@
               $('#btnSearch').click(function () {
 
                   
-                  $('#hiddendiv').html('<thead style="background-color: black; color: white;"><tr><th style="color: white;">DATE</th><th>STATUS</th><th>LOGIN TIME</th> <th>LOGOUT TIME</th></tr> </thead>');
+                  $('#hiddendiv').html('<table class="table table-bordered style="color: white;"" ><thead><style>th{padding: 5px;}</style><tr> <th >DATE</th> <th>STATUS</th> <th>LOGIN TIME</th><th>LOGOUT TIME</th> </tr> </thead><tbody></tbody></table>');
               });
 
               
             });
+//         $(document).ready(function () {
+  
+              
+//   $('#btnSearch').click(function () {
+
+      
+//       $('#hiddendiv').load('Tattend.html');
+      
+//   });
+
+  
+// });
+// $(document).ready(function(){
+// $('#btnSearch').click(function(){
+// $.get('Tattend.html').success(function(data)
+//  {
+//      $('#hiddendiv').html(data);
+//  });
+//  });
+//  });
         </script>
 </body>
 {% endblock %}
