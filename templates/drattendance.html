@@ -20,7 +20,9 @@
   }
 </style>
 <body>
-    <div id="firstbox1"><label id="myprofile" style="margin-left: 0%;">ATTENDANCE</label>
+  <label id="myprofile"  style="margin-left: 7%;">ATTENDANCE</label>
+   
+    <div id="firstbox1" class="container">
       <div class="row">
         <div class="col-md-10">
           <div id="firstbox" class="shadow p-3 " style="background-color: #191c24">
@@ -53,7 +55,7 @@
 
             </div>
             <div class="row">
-            <div class="col-md-8 mt-5">
+            <div class="col-md-6 mt-5 " >
             <div id="hiddendiv" style="margin-left: 5%;">
             
             </div>
@@ -62,7 +64,7 @@
         </div>
       </div>
     </div>
-    </div>
+  </div>
         <script type="text/javascript">
         //         $("#btnSearch").click(function () {
         //         const url = $("#personForm").attr("data-cities-url");
@@ -83,13 +85,14 @@
         //    document.getElementById('hiddendiv').style.display = "block";
         // }
         // Check if file is completely ready
+        
         $(document).ready(function () {
   
               
               $('#btnSearch').click(function () {
 
                   
-                  $('#hiddendiv').html('<table class="table table-bordered style="color: white;"" ><thead><style>th{padding: 5px;}</style><tr> <th >DATE</th> <th>STATUS</th> <th>LOGIN TIME</th><th>LOGOUT TIME</th> </tr> </thead><tbody></tbody></table>');
+                  $('#hiddendiv').html('<div class="conatainer table-responsive"><div class="row"> <div class="col-md-6"><table class="table table-bordered   style="color:  ><thead><style>th{padding: 1px; </style><tr><th >DATE</th><th>STATUS</th> <th>LOGIN TIME</th><th>LOGOUT TIME</th> </tr> </thead><tbody></tbody></table></div></div></div>');
               });
 
               
