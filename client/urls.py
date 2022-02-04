@@ -26,4 +26,5 @@ urlpatterns = [
     path('leaverequiest/', views.leaverequiest),
     path('drattendance/', views.drattendance),
     path('Tattend/', views.Tattend),
+    path('applyleav3/', views.applyleav3),
 ]

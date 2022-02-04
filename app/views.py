@@ -16,6 +16,8 @@ def drattendance(request):
     return render(request,'drattendance.html')
 def Tattend(request):
     return render(request,'Tattend.html')
+def applyleav3(request):
+    return render(request,'applyleav3.html')
 
 
 
